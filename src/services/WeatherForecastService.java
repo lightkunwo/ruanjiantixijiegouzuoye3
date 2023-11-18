@@ -21,7 +21,7 @@ public class WeatherForecastService {
         // 调用xxLocator对象的getXXPort()方法生成xxSoapBindingStub对象
         WeatherWebServiceSoap12Stub stud =  (WeatherWebServiceSoap12Stub) locator.getWeatherWebServiceSoap12();
         // 输出当天的天气状况
-        String[] weather = stud.getWeatherbyCityName("杭州");
+        String[] weather = stud.getWeatherbyCityName(cityName);
 
         return weather;
     }
