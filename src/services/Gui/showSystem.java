@@ -30,7 +30,7 @@ public class showSystem extends JFrame {
         //判断是否输入了
         if (str.equals("")) {
             Object[] options = {"OK ", "CANCEL "};
-            JOptionPane.showOptionDialog(null, "您还没有输入 ", "提示", JOptionPane.DEFAULT_OPTION,
+            JOptionPane.showOptionDialog(null, "您还没有输入城市名", "提示", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.WARNING_MESSAGE, null, options, options[0]);
         } else {
             String result[] = new String[0];
@@ -61,12 +61,12 @@ public class showSystem extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setSize(1000, 1000);
-        textField.setSize(100,150);
+        textField.setSize(1000,150);
         textField.setLocation(0,0);
         out.setText("1");
         // 创建按钮并添加到窗口中
         submitButton = new JButton("Submit");
-        submitButton.setSize(100,100);
+        submitButton.setSize(850,100);
         submitButton.setLocation(100,150);
         // 设置按钮点击事件的监听器
         submitButton.addActionListener(new ActionListener() {
@@ -83,7 +83,7 @@ public class showSystem extends JFrame {
 
     public static void addFunction(showSystem showSystem) {
         // 将构件添加到主面板
-        showSystem.getContentPane().setSize(600,600);
+        showSystem.getContentPane().setSize(1000,600);
         showSystem.getContentPane().add(showSystem.textField);
         showSystem.getContentPane().add(showSystem.submitButton);
         showSystem.getContentPane().add(showSystem.out);
